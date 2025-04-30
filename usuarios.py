@@ -8,8 +8,9 @@ class GestorUsuarios:
         self._crear_archivo_si_no_existe()
 
     def _crear_archivo_si_no_existe(self):
-        usuarios_iniciales = obtener_usuarios_iniciales()
-        self.guardar_usuarios(usuarios_iniciales)
+        if not os.path.exists(self.fichero):
+            with open(self.fichero, 'w') as archivo:
+                archivo.write("")  
 
     def cargar_usuarios(self):
         try:

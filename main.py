@@ -1,7 +1,13 @@
+import os
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 from usuario import Usuario
 from usuarios import GestorUsuarios
+s
+if os.path.exists("usuarios.txt"):
+    print("El archivo usuarios.txt existe en:", os.path.abspath("usuarios.txt"))
+else:
+    print("El archivo usuarios.txt no existe.")
 
 def iniciar_sesion():
     usuario_input = entry_usuario.get()
